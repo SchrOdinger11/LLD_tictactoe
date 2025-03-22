@@ -1,6 +1,6 @@
 package model;
 
-enum PieceType{
+public enum PieceType{
 X,
 O
 }
