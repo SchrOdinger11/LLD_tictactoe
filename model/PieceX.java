@@ -1,8 +1,7 @@
 package model;
 
-class PieceX extends PlayingPiece {
-    PieceX(){
+public class PieceX extends Piece {
+    public PieceX() {
         super(PieceType.X);
     }
-    
 }

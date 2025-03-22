@@ -1,20 +1,20 @@
 package model;
 
 public class board {
-    private PieceType[][] board;
+    private Piece[][] board;
     private int size;
     public board(int size){
         this.size = size;
-        board = new PieceType[size][size];
+        board = new Piece[size][size];
     }
-    public boolean setPiece(int x, int y, PieceType piece){
+    public boolean setPiece(int x, int y, Piece piece){
         if(board[x][y] != null){
             return false;
         }
         board[x][y] = piece;
         return true;
     }
-    public PieceType getPiece(int x, int y){
+    public Piece getPiece(int x, int y){
         return board[x][y];
     }
     public int getSize(){
@@ -84,7 +84,7 @@ public class board {
                 if(board[i][j] == null){
                     System.out.print(" ");
                 }else{
-                    if(board[i][j] == PieceType.X){
+                    if(board[i][j].getType() == PieceType.X){
                         System.out.print("X");
                     }else{
                         System.out.print("O");
@@ -107,7 +107,7 @@ public class board {
         }}
       
     }
-    public PieceType[][] getBoard(){
+    public Piece[][] getBoard(){
         return board;
     }   
    

@@ -2,8 +2,8 @@ package model;
 
 public class Player {
     String name;
-    PieceType pieceType;
-    public Player(String name, PieceType o){
+    Piece pieceType;
+    public Player(String name, Piece o){
         this.name = name;
         this.pieceType = o;
     }
@@ -13,7 +13,7 @@ public class Player {
     public void setName(String name){
         this.name = name;
     }
-    public PieceType getPieceType(){
+    public Piece getPieceType(){
         return pieceType;
     }   
 }

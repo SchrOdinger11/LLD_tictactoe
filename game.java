@@ -3,7 +3,9 @@ import java.util.Deque;
 
 import model.Player;
 import model.board;
+import model.PieceO;
 import model.PieceType;
+import model.PieceX;
 
 public class game {
     private board board;
@@ -12,8 +14,8 @@ public class game {
     public  game(board board) {
         this.board = board;
         players = new java.util.ArrayDeque<>();
-        Player player1 = new Player("Player 1", PieceType.X);
-        Player player2 = new Player("Player 2", PieceType.O);
+        Player player1 = new Player("Player 1", new PieceX());
+        Player player2 = new Player("Player 2", new PieceO());
         players.add(player1);
         players.add(player2);
     }
